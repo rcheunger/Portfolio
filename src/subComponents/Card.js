@@ -5,12 +5,12 @@ import styled from "styled-components";
 import { Github } from "../components/AllSvgs";
 
 const Box = styled(motion.li)`
-  width: 16rem;
-  height: 40vh;
+  width: 20rem;
+  height: 55vh;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
-  padding: 1.5rem 2rem;
-  margin-right: 8rem;
+  padding: 1rem 1.5rem;
+  margin-right: 7rem;
   border-radius: 0 50px 0 50px;
   display: flex;
   flex-direction: column;
@@ -24,17 +24,31 @@ const Box = styled(motion.li)`
   }
 `;
 const Title = styled.h2`
-  font-size: calc(1em + 0.5vw);
+  font-size: calc(1.1em + 0.5vw);
 `;
 
 const Description = styled.h2`
   font-size: calc(0.8em + 0.3vw);
   font-family: "Karla", sans-serif;
-  font-weight: 500;
+  font-weight: 450;
+`;
+
+const Image = styled.div`
+  background-image: ${(props) => `url(${props.img})`};
+  width: 18rem;
+  height: 12rem;
+  margin: 0rem 1rem 0rem 1rem;
+  background-size: cover;
+  border-radius: 5px;
+  background-position: center center;
+  ${Box}:hover & {
+    color: #111; 
+    box-shadow: 0 0 50px greenyellow; 
 `;
 const Tags = styled.div`
   border-top: 2px solid ${(props) => props.theme.body};
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   ${Box}:hover & {
@@ -56,7 +70,7 @@ const Link = styled(NavLink)`
   color: ${(props) => props.theme.text};
   text-decoration: none;
   padding: 0.5rem calc(2rem + 2vw);
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 40px;
   font-size: calc(1em + 0.5vw);
   ${Box}:hover & {
     background-color: ${(props) => props.theme.text};
@@ -89,12 +103,13 @@ const Item = {
 };
 
 const Card = (props) => {
-  const { id, name, description, tags, demo, github } = props.data;
+  const { id, name, description, imgSrc, tags, demo, github } = props.data;
 
   return (
     <Box key={id} variants={Item}>
       <Title>{name}</Title>
       <Description>{description}</Description>
+      <Image img={imgSrc} />
       <Tags>
         {tags.map((t, id) => {
           return <Tag key={id}>#{t}</Tag>;

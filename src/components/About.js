@@ -67,14 +67,14 @@ const AboutPage = () => {
         </Spaceman>
         <Main>
           I'm a full stack Web3 developer with located in Vancouver, Canada. I
-          enjoy optimizing smart contracts and shipping amazing products to
-          users in this rapidly growing space.
+          enjoy optimizing smart contracts and shipping amazing, well-tested
+          products to users in this rapidly growing space.
           <br /> <br />
           I have been involved in crypto since 2019, and have been obsessed with
           the technology ever since.
           <br /> <br />
-          In my spare time you can find me playing sports, hiking in the
-          wilderness backcountry, building my knowldge of new crypto projects,
+          In my spare time you can find me playing sports, listening to music,
+          hiking in the wilderness, building my knowldge of new crypto projects,
           and engaging with a deep network of relationships within the
           community!
         </Main>

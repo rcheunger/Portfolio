@@ -67,7 +67,7 @@ const Intro = () => {
     >
       <SubBox>
         <Text>
-          <h1>Hi there,</h1>
+          <h1>Hey,</h1>
           <h3>I'm Cheunger.</h3>
           <h6>
             I enjoy solidity, full stack developement, and occasionally design.{" "}

@@ -56,7 +56,7 @@ const Title = styled.h2`
 
 const Description = styled.div`
   color: ${(props) => props.theme.text};
-  font-size: calc(0.6em + 1vw);
+  font-size: calc(0.4em + 1vw);
   padding: 0.5rem 0;
   ${Main}:hover & {
     color: ${(props) => props.theme.body};
@@ -118,7 +118,7 @@ const MySkillsPage = () => {
           </Description>
           <Description>
             <strong>Skills</strong>
-            <p>SQL, Html, Css, JavaScript, React, Solidity </p>
+            <p>SQL, Html, Css, JavaScript, React, Node, Solidity </p>
           </Description>
           <Description>
             <strong>Tools</strong>
