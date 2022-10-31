@@ -6,7 +6,7 @@ const Logo = styled.h1`
   display: inline-block;
   color: ${(props) =>
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
-  font-family: "Pacifico", cursive;
+  font-family: "Overpass Mono", monospace;
   position: fixed;
   left: 2rem;
   top: 2rem;
@@ -14,7 +14,7 @@ const Logo = styled.h1`
 `;
 
 const LogoComponent = (props) => {
-  return <Logo color={props.theme}>CB</Logo>;
+  return <Logo color={props.theme}>Cheunger.</Logo>;
 };
 
 export default LogoComponent;

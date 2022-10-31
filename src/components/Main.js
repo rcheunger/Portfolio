@@ -5,7 +5,6 @@ import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
 
 const MainContainer = styled.div`
@@ -36,21 +35,13 @@ const Contact = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
 `;
-const BLOG = styled(NavLink)`
+const DESIGN = styled(NavLink)`
   color: ${(props) => props.theme.text};
-  position: absolute;
-  top: 50%;
-  right: calc(1rem + 2vw);
-  transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
 `;
-const WORK = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
-  position: absolute;
-  top: 50%;
-  left: calc(1rem + 2vw);
-  transform: translate(-50%, -50%) rotate(-90deg);
+const PROJECTS = styled(NavLink)`
+  color: ${(props) => props.theme.text};
   text-decoration: none;
   z-index: 1;
 `;
@@ -66,12 +57,12 @@ const BottomBar = styled.div`
 `;
 
 const ABOUT = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => props.theme.body};
   text-decoration: none;
   z-index: 1;
 `;
 const SKILLS = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
   text-decoration: none;
   z-index: 1;
 `;
@@ -121,7 +112,7 @@ const DarkDiv = styled.div`
 `;
 
 const Main = () => {
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(true);
 
   const handleClick = () => setClick(!click);
 
@@ -132,16 +123,6 @@ const Main = () => {
         <PowerButton />
         <LogoComponent theme={click ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />
-
-        <Center click={click}>
-          <YinYang
-            onClick={() => handleClick()}
-            width={click ? 120 : 200}
-            height={click ? 120 : 200}
-            fill="currentColor"
-          />
-          <span>click here</span>
-        </Center>
 
         <Contact
           target="_blank"
@@ -162,38 +143,6 @@ const Main = () => {
             Say hi..
           </motion.h2>
         </Contact>
-        <BLOG to="/blog">
-          <motion.h2
-            initial={{
-              y: -200,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Blog
-          </motion.h2>
-        </BLOG>
-        <WORK to="/work" click={+click}>
-          <motion.h2
-            initial={{
-              y: -200,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Work
-          </motion.h2>
-        </WORK>
         <BottomBar>
           <ABOUT to="/about" click={+click}>
             <motion.h2
@@ -224,9 +173,41 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              My Skills.
+              Skills.
             </motion.h2>
           </SKILLS>
+          <PROJECTS to="/projects" click={+click}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Projects.
+            </motion.h2>
+          </PROJECTS>
+          <DESIGN to="/design">
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Design.
+            </motion.h2>
+          </DESIGN>
         </BottomBar>
       </Container>
       {click ? <Intro click={click} /> : null}

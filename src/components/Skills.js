@@ -84,41 +84,45 @@ const MySkillsPage = () => {
             <Design width={40} height={40} /> Designer
           </Title>
           <Description>
-            I love to create design which speaks, Keep it clean, minimal and
-            simple.
+            With over 3+ years of experience in design, I use this skill to
+            create original art assets for my projects as well as providing an
+            creative perspective to help my team thrive.
           </Description>
           <Description>
             <strong>I like to Design</strong>
             <ul>
               <li>Web Design</li>
-              <li>Mobile Apps</li>
+              <li>Game assets</li>
+              <li>Media Background Images</li>
+              <li>NFT Projects</li>
             </ul>
           </Description>
           <Description>
             <strong>Tools</strong>
             <ul>
-              <li>Figma</li>
+              <li>
+                Photoshop, Illustrator, After Effects, Asephrite, Cinema 4d,
+                Blender, Figma
+              </li>
             </ul>
           </Description>
         </Main>
         <Main>
           <Title>
-            <Develope width={40} height={40} /> Frontend Developer
+            <Develope width={40} height={40} /> Developer
           </Title>
           <Description>
-            I value business or brand for which i'm creating, thus i enjoy
-            bringing new ideas to life.
+            I'm a fullstack developer with a strong profiecency in Solidity. I
+            believe in the technology of Web3 and I enjoy building in the space
+            using JavaScript + Solidity.
           </Description>
           <Description>
             <strong>Skills</strong>
-            <p>
-              Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase
-              etc.
-            </p>
+            <p>SQL, Html, Css, JavaScript, React, Solidity </p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VScode, Github, Codepen etc.</p>
+            <p>VScode, Github, Remix, Hardhat, Dune, Covalent, etc. </p>
           </Description>
         </Main>
 

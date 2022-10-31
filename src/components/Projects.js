@@ -9,7 +9,6 @@ import PowerButton from "../subComponents/PowerButton";
 
 import { Project } from "../data/ProjectData";
 import Card from "../subComponents/Card";
-import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitlte";
 
 const Box = styled.div`
@@ -28,6 +27,7 @@ const Main = styled(motion.ul)`
   display: flex;
   color: white;
 `;
+
 const Rotate = styled.span`
   display: block;
   position: fixed;
@@ -53,16 +53,12 @@ const container = {
 
 const Projects = () => {
   const ref = useRef(null);
-  const yinyang = useRef(null);
 
   useEffect(() => {
     let element = ref.current;
 
     const rotate = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`;
-
-      return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
     };
 
     window.addEventListener("scroll", rotate);
@@ -79,13 +75,10 @@ const Projects = () => {
         <PowerButton />
 
         <Main ref={ref} variants={container} initial="hidden" animate="show">
-          {Work.map((d) => (
+          {Project.map((d) => (
             <Card key={d.id} data={d} />
           ))}
         </Main>
-        <Rotate ref={yinyang}>
-          <YinYang width={80} height={80} fill={DarkTheme.text} />
-        </Rotate>
 
         <BigTitlte text="PROJECTS" top="10%" right="20%" />
       </Box>

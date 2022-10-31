@@ -66,14 +66,17 @@ const AboutPage = () => {
           <img src={astronaut} alt="spaceman" />
         </Spaceman>
         <Main>
-          I'm a front-end developer located in India. I love to create simple
-          yet beautiful websites with great user experience.
+          I'm a full stack Web3 developer with located in Vancouver, Canada. I
+          enjoy optimizing smart contracts and shipping amazing products to
+          users in this rapidly growing space.
           <br /> <br />
-          I'm interested in the whole frontend stack Like trying new things and
-          building great projects. I'm an independent freelancer and blogger. I
-          love to write blogs and read books.
-          <br /> <br />I believe everything is an Art when you put your
-          consciousness in it. You can connect with me via social links.
+          I have been involved in crypto since 2019, and have been obsessed with
+          the technology ever since.
+          <br /> <br />
+          In my spare time you can find me playing sports, hiking in the
+          wilderness backcountry, building my knowldge of new crypto projects,
+          and engaging with a deep network of relationships within the
+          community!
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />

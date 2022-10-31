@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
+import { LinkedIn, Github, Twitter, Behance } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -36,7 +36,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://github.com/codebucks27" }}
+          to={{ pathname: "https://github.com/rcheunger" }}
         >
           <Github
             width={25}
@@ -53,7 +53,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://twitter.com/code_bucks" }}
+          to={{ pathname: "https://twitter.com/rcheunger" }}
         >
           <Twitter
             width={25}
@@ -70,9 +70,9 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://facebook.com/codebucks27" }}
+          to={{ pathname: "https://ca.linkedin.com/in/rowan-cheung-6309b01bb" }}
         >
-          <Facebook
+          <LinkedIn
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
@@ -87,9 +87,9 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://youtube.com" }}
+          to={{ pathname: "https://www.behance.net/rcheunger" }}
         >
-          <YouTube
+          <Behance
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
